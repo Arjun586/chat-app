@@ -1,0 +1,46 @@
+# ---- Global ----
+node_modules/
+dist/
+build/
+coverage/
+
+# Env and secrets
+.env
+.env.*
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Frontend specific (React / Vite / Next etc.)
+client/.next/
+client/.nuxt/
+client/.svelte-kit/
+client/.turbo/
+client/.parcel-cache/
+client/.cache/
+client/.storybook/
+client/out/
+
+# Backend specific (Node / TS)
+server/dist/
+server/build/
+server/coverage/
+server/.tsbuildinfo
+
+# Misc
+*.pid
+*.seed
+*.tgz
