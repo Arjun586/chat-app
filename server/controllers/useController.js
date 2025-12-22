@@ -2,6 +2,10 @@ import { generateToken } from "../lib/utils.js";
 import User from "../models/userModel.js";
 import cloudinary from "../lib/cloudinary.js";
 
+
+//TODO: Where are cookies? 
+
+
 //signUp a new user
 export const signUp = async(req, res) =>{
     try {
@@ -44,7 +48,6 @@ export const signUp = async(req, res) =>{
 }
 
 // login an existing user
-
 export const login = async(req, res) =>{
     try {
         const {email, password} = req.body;
@@ -82,8 +85,6 @@ export const login = async(req, res) =>{
 export const checkAuth = (req, res) =>{
     res.json({success: true, user: req.user}); 
 }
-
-
 
 export const updateProfile = async(req, res) =>{
     try{
