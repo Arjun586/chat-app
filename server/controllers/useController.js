@@ -43,7 +43,6 @@ export const signUp = async(req, res) =>{
     }
 }
 
-
 // login an existing user
 
 export const login = async(req, res) =>{
@@ -106,6 +105,6 @@ export const updateProfile = async(req, res) =>{
 
     }catch (error) {
         console.log(error);
-        res.status(500).json({message: error.message})
+        res.status(500).json({success: false, message: error.message})
     }
 }

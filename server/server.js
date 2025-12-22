@@ -3,6 +3,8 @@ import "dotenv/config.js";
 import cors from 'cors';
 import http from 'http';
 import { connectDB } from './lib/db.js';
+import userRouter from './routes/userRoutes.js';
+import messageRouter from './routes/messageRoutes.js';
 
 // create app
 const app = express();
@@ -15,6 +17,9 @@ app.use(express.json({limit: '5mb'}));
 app.use("/api/status",(req, res) => {
     res.send("server is live")
 })
+
+app.use("/api/auth", userRouter)
+app.use("/api/messages", messageRouter)
 
 // connect to database
 await connectDB()
